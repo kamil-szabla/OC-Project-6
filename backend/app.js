@@ -1,12 +1,18 @@
+// User with delete and modify tables permissions.
+// MongoDB Name: guru-tables
+// MongoDB Pass: vNI3m8DmDyQ7SRcc
+
+// User with modify database content permissions.
+// MongoDB Name: guru-database
+// MongoDB Pass: 5awMykwnpogVbB9L
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const path = require("path");
-
 const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
-
 const app = express();
+const path = require("path");
 
 mongoose
   .connect(
@@ -23,6 +29,8 @@ mongoose
 
 mongoose.set("useCreateIndex", true);
 
+app.use(bodyParser.json());
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -36,9 +44,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(bodyParser.json());
 app.use("/images", express.static(path.join(__dirname, "images")));
-
 app.use("/api/auth", userRoutes);
 app.use("/api/sauces", sauceRoutes);
 

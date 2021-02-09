@@ -1,11 +1,3 @@
-// User with delete and modify tables permissions.
-// MongoDB Name: guru-tables
-// MongoDB Pass: vNI3m8DmDyQ7SRcc
-
-// User with modify database content permissions.
-// MongoDB Name: guru-database
-// MongoDB Pass: 5awMykwnpogVbB9L
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");

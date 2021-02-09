@@ -19,4 +19,4 @@ Use `Ctrl+C` in the terminal to stop the local server.
 
 Navigate to './backend' folder.
 
-Run 'nodemon server'. This will run the server and will connect with MongoDB Atlas.
+Run `nodemon server`. This will run the server and will connect with MongoDB Atlas.

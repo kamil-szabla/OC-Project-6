@@ -1,6 +1,8 @@
 # OC-Project-6
 Student repository for project 6 of the Web Developer Path
 
+I took my Javascript skills to the backend with Node, Express and MongoDB, building secure web service with fully featured API that allows user to interact with interface and make changes via CRUD routes.
+
 
 # HOT TAKES #
 
